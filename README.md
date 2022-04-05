@@ -5,7 +5,7 @@ C programming can be very tedious when one doesn't have access to the highly use
 ## Table of Content
 * [Libc Functions](https://github.com/humbertoarndt/libft/edit/main/README.md#libc-functions)
 * [Additional Functions](https://github.com/humbertoarndt/libft/edit/main/README.md#additional-functions)
-* [Makefile](]https://github.com/humbertoarndt/libft/edit/main/README.md#makefile)
+* [Makefile](https://github.com/humbertoarndt/libft/edit/main/README.md#makefile)
 * [Bonus Functions](https://github.com/humbertoarndt/libft/edit/main/README.md#bonus-functions)
 ## Libc Functions
 * [ft_isalpha]()
