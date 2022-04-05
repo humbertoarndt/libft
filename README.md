@@ -1,2 +1,53 @@
-# libft
-Repository with the content for the first project in the 42SP cursus
+# 42 São Paulo - Libft
+Version: April 2022 - Created
+## Overview
+C programming can be very tedious when one doesn't have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them. You will create your own library. It will be helpfull since you will use it in you next C school assignments.
+## Libc functions
+* [ft_isalpha]()
+* [ft_isdigit]()
+* [ft_isalnum]()
+* [ft_isascii]()
+* [ft_isprint]()
+* [ft_strlen]()
+* [ft_memset]()
+* [ft_bzero]()
+* [ft_memcpy]()
+* [ft_memmove]()
+* [ft_strlcpy]()
+* [ft_strlcat]()
+* [ft_toupper]()
+* [ft_tolower]()
+* [ft_strchr]()
+* [ft_strrchr]()
+* [ft_strncmp]()
+* [ft_memchr]()
+* [ft_memcmp]()
+* [ft_strnstr]()
+* [ft_atoi]()
+* [ft_calloc]()
+* [ft_strdup]()
+## Additional functions
+* [ft_substr]()
+* [ft_strjoin]()
+* [ft_strtrim]()
+* [ft_split]()
+* [ft_itoa]()
+* [ft_strmapi]()
+* [ft_striteri]()
+* [ft_putchar_fd]()
+* [ft_putstr_fd]()
+* [ft_putendl_fd]()
+* [ft_putnbr_fd]()
+## Makefile
+* [libft.h]()
+* [Makefile]()
+## Bonus functions
+* [ft_lstnew]()
+* [ft_lstadd_front]()
+* [ft_lstsize]()
+* [ft_lstlast]()
+* [ft_lstadd_back]()
+* [ft_lstdelone]()
+* [ft_lstclear]()
+* [ft_lstiter]()
+* [ft_lstmap]()
