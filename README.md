@@ -3,10 +3,10 @@ Version: April 2022 - Created
 ## Overview
 C programming can be very tedious when one doesn't have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them. You will create your own library. It will be helpfull since you will use it in you next C school assignments.
 ## Table of Content
-* [Libc Functions](https://github.com/humbertoarndt/libft/edit/main/README.md#libc-functions)
-* [Additional Functions](https://github.com/humbertoarndt/libft/edit/main/README.md#additional-functions)
-* [Makefile](https://github.com/humbertoarndt/libft/edit/main/README.md#makefile)
-* [Bonus Functions](https://github.com/humbertoarndt/libft/edit/main/README.md#bonus-functions)
+* [Libc Functions](https://github.com/humbertoarndt/libft/main/README.md#libc-functions)
+* [Additional Functions](https://github.com/humbertoarndt/libft/main/README.md#additional-functions)
+* [Makefile](https://github.com/humbertoarndt/libft/main/README.md#makefile)
+* [Bonus Functions](https://github.com/humbertoarndt/libft/main/README.md#bonus-functions)
 ## Libc Functions
 * [ft_atoi](https://github.com/humbertoarndt/libft/blob/main/ft_atoim.c)
 * [ft_bzero](https://github.com/humbertoarndt/libft/blob/main/ft_bzero.c)
