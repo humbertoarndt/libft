@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 16:10:29 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/05 17:57:32 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/07 20:00:10 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		s1++;
 		s2++;
 	}
-	return (*(unsigned char)s1 - *(unsigned char)s2);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }

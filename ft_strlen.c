@@ -6,11 +6,11 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 19:02:25 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/05 17:57:11 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/07 20:00:05 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
