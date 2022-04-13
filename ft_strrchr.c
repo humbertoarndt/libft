@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 22:15:15 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/13 18:47:23 by harndt           ###   ########.fr       */
+/*   Created: 2022/04/05 15:50:56 by harndt            #+#    #+#             */
+/*   Updated: 2022/04/13 18:46:11 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char	*ft_strrchr(const char *str, int c)
 {
-	if (c >= 65 && c <= 90)
-		c += 32;
-	return (c);
+	int	len;
+
+	len = ft_strlen(str);
+	while (len && *(str + len) != (char)c)
+		len--;
+	if (*(str + len) == (char) c)
+		return ((char *)(str + len));
+	return (NULL);
 }

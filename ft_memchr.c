@@ -6,13 +6,13 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 18:54:23 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/07 19:59:22 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/13 18:42:42 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memchr(const void *str, int c, size_t n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
 	while (n--)
 		if (*(unsigned char *)str++ == (unsigned char)c)

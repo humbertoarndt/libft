@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 22:15:15 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/13 18:47:23 by harndt           ###   ########.fr       */
+/*   Created: 2022/04/12 20:22:14 by harndt            #+#    #+#             */
+/*   Updated: 2022/04/13 18:47:15 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	if (c >= 65 && c <= 90)
-		c += 32;
-	return (c);
+	char			*str;
+	unsigned int 	i;
+
+	i = 0;
+	str = (char *) malloc (len * sizeof(char) + 1);
+	if (!s ||!str)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	while (len)
+	{
+		str[i] = s[start];
+		i++;
+		start++;
+		len--;
+	}
+	str[i] = '\0';
+	return (str);
 }
