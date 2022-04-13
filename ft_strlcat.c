@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 16:45:52 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/13 18:44:41 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/13 18:54:45 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i + len] = src[i];
 		i++;
 	}
-	// dst[i + len] = '\0';
 	return (ft_strlen(dst));
 }
