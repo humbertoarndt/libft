@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:23:44 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/13 18:43:51 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/21 17:21:02 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ static char	*ft_wordcpy(const char *s, char c, char **strs)
 {
 	char	*next;
 
-	next = ft_strchr(s ,c);
+	next = ft_strchr(s, c);
 	if (!next || !c)
 	{
 		next = (char *)s;
 		while (*next)
 			next++;
 	}
-	*strs = ft_substr(s, 0, next -s);
+	*strs = ft_substr(s, 0, next - s);
 	return (next);
 }
 

@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 01:14:40 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/13 18:44:34 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/21 17:22:08 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	str = (char *) malloc ((ft_strlen(s1) + ft_strlen(s2) * sizeof(char) +1));
+	str = (char *) malloc ((ft_strlen(s1) + ft_strlen(s2) * sizeof(char) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;

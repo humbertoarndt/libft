@@ -6,20 +6,21 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 21:42:28 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/13 18:47:40 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/21 17:23:43 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <ctype.h>
+// Include external libraries
 # include <stdlib.h>
-# include <string.h>
-# include <bsd/string.h>
-// Remover
-# include <stdio.h>
 # include <unistd.h>
+// Remover
+# include <ctype.h>
+# include <string.h>
+# include <stdio.h>
+# include <bsd/string.h>
 
 // Libc functions
 // <ctype.h> functions:
@@ -103,9 +104,9 @@ void		*ft_memset(void *str, int c, int n);
 **/
 void		*ft_memcpy(void *dest, const void *src, size_t n);
 /**
- * @brief Copies character from src to dst, but for overlapping memory blocks.
- * @param dst Pointer to the destination array to where the content is to be copied.
- * @param src Pointer to the source of data to be copied.
+ * @brief Copies character from src to dst, in case of overlapping memory blocks.
+ * @param dst Pointer to the dst array where the content is to be copied.
+ * @param src Pointer to the src of data to be copied.
  * @param n The number of bytes to be copied.
  * @return Pointer to the destination.
 **/
@@ -154,14 +155,14 @@ char		*ft_strrchr(const char *str, int c);
 // BSD (<bsd/string.h>):
 /**
  * @brief Copies up to size -1 character from src to dst.
- * @param dst Pointer to the destination array to where the content is to be copied.
+ * @param dst Pointer to dst where the content is to be copied.
  * @param src Pointer to the source of data to be copied.
  * @return Total length of the String tried to create.
 **/
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 /**
  * @brief Append to size -1 character from src to the end of dst.
- * @param dst Pointer to the destination array to where the content is to be appended.
+ * @param dst Pointer to the dst array where the content is to be appended.
  * @param src Pointer to the source of data to be copied.
  * @return Total length of the String tried to create.
 **/
@@ -220,7 +221,7 @@ char		*ft_substr(const char *s, unsigned int start, size_t len);
 **/
 char		*ft_strjoin(const char *s1, const char *s2);
 /**
- * @brief Allocates a copy of s1 with the characters in set removed from the both ends.
+ * @brief Allocates a copy of s1 with characters in set removed from both ends.
  * @param s1 String to be trimmed.
  * @param s2 String referenced to trim.
  * @return Pointer to the copied String, or NULL if the allocation fails.
@@ -229,16 +230,51 @@ char		*ft_strtrim(const char *s1, const char *set);
 /**
  * @brief Allocates an array obtained by splitting s delimited by c.
  * @param s String to be splited.
- * @param c String delimiter character
+ * @param c String delimiter character.
  * @return Pointer to the splitted String.
 **/
 char		**ft_split(const char *s, char c);
-// char		*ft_itoa(int n);
-// char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
-// void		ft_striteri(char *s, void (*f)(unsigned int, char*));
-// void		ft_putchar_fd(char c, int fd);
-// void		ft_putstr_fd(char *s, int fd);
-// void		ft_putlendl_fd(char *s, int fd);
-// void		ft_putnbr(int n, int fd);
-
+/**
+ * @brief Allocates a String received by Integers.
+ * @param n Integer to convert.
+ * @return The String representing the Integer, or NULL if the allocation fails.
+**/
+char		*ft_itoa(int n);
+/**
+ * @brief Applies function 'f' to each character in the String 's'.
+ * @param s String which to iterate.
+ * @param f Function to apply to each character.
+ * @return Index to the first position in the new array.
+ **/
+char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+/**
+ * @brief Applies function 'f' to each character in the String 's'.
+ * @param s String which to iterate.
+ * @param f Function to apply to each character.
+**/
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+/**
+ * @brief Outputs the character 'c' to the given file descriptor.
+ * @param c The character to output.
+ * @param fd The file descriptor on which to write.
+**/
+void		ft_putchar_fd(char c, int fd);
+/**
+ * @brief Outputs the String 's' to the given file descriptor.
+ * @param s The String to output.
+ * @param fd The file descriptor on which to write.
+**/
+void		ft_putstr_fd(char *s, int fd);
+/**
+ * @brief Outputs the String 's' to the given file descriptor followed newline.
+ * @param s The String to output.
+ * @param fd The file descriptor on which to write.
+**/
+void		ft_putendl_fd(char *s, int fd);
+/**
+ * @brief Outputs the Integer 'n' to the given file descriptor.
+ * @param n The Integer to output.
+ * @param fd The file descriptor on which to write.
+**/
+void		ft_putnbr_fd(int n, int fd);
 #endif

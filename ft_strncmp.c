@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 16:10:29 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/13 18:45:04 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/21 17:22:48 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	if (!n)
 		return (0);
-	while (*s1 && *s2 && *s1 == *s2 && n--)
+	while (*s1 && *s2 && *s1 == *s2 && --n)
 	{
 		s1++;
 		s2++;
