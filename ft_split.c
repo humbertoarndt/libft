@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:23:44 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/21 17:21:02 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/25 15:57:00 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,19 @@
 **/
 static int	ft_wordcount(const char *s, char c)
 {
+	int	i;
 	int	wc;
 
+	i = 0;
 	wc = 0;
-	while (s)
+	while (s[i])
 	{
-		while (*s == c)
-			s++;
-		if (*s)
+		while (s[i] == c)
+			i++;
+		if (s[i] != '\0')
 			wc++;
-		s = ft_strchr(s, c);
+		while (s[i] && (s[i] != c))
+			i++;
 	}
 	return (wc);
 }

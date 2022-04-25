@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 01:19:53 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/21 17:23:07 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/25 15:58:02 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strtrim(const char *s1, const char *set)
 {
-	size_t	s1_len;
+	size_t	length;
 
-	if (s1 == NULL || set == NULL)
+	if (!s1 || !set)
 		return (NULL);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
-	s1_len = ft_strlen(s1);
-	while (s1_len && ft_strchr(set, s1[s1_len]))
-		s1_len--;
-	return (ft_substr(s1, 0, s1_len + 1));
+	length = ft_strlen(s1);
+	while (ft_strrchr(set, *(s1 + length - 1)))
+		length--;
+	return (ft_substr(s1, 0, length));
 }
