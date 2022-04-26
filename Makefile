@@ -38,7 +38,7 @@ bonus: $(OBJS) $(BONUS_OBJS)
 
 %.o: %.c $(HEADER)
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "Object created with success."
+	@echo "Object $< created with success."
 
 clean:
 	@rm -f $(OBJS) $(BONUS_OBJS)
