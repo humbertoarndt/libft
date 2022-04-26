@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 22:27:12 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/25 15:57:10 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/26 08:14:21 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strdup(const char *str)
 
 	i = 0;
 	ptr = (char *) malloc (sizeof(char) * ft_strlen(str) + 1);
+	if (!ptr)
+		return (NULL);
 	while (str[i])
 	{
 		ptr[i] = str[i];

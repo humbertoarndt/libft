@@ -36,8 +36,8 @@ bonus: $(OBJS) $(BONUS_OBJS)
 	@ranlib $(NAME)
 	@echo "Bonus object created with success."
 
-%.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER)
+%.o: %.c $(HEADER)
+	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "Object created with success."
 
 clean:

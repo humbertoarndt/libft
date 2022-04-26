@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 16:35:35 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/25 15:57:29 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/26 08:14:50 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	len;
 
-	if (!dst || !src)
-		return (0);
 	len = ft_strlen(src);
 	if (size == 0)
 		return (len);
