@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 00:58:32 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/25 15:53:27 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/29 20:15:53 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	if (!new)
+		return ;
 	if (*lst)
 		ft_lstlast(*lst)->next = new;
 	else

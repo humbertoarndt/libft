@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 20:22:14 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/25 15:58:07 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/29 20:15:15 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		str[0] = '\0';
 		return (str);
 	}
-	ft_strlcpy(str, (s + start), (malloc_size +1));
+	ft_strlcpy(str, (s + start), (malloc_size + 1));
 	return (str);
 }

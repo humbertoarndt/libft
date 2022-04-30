@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 21:42:28 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/25 15:59:23 by harndt           ###   ########.fr       */
+/*   Updated: 2022/04/29 20:16:27 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -226,7 +226,7 @@ void		ft_bzero(void *s, size_t n);
  * @param len Maximum length of the substring.
  * @return Pointer to the substring, or NULL if the allocation fails.
 **/
-char		*ft_substr(const char *s, unsigned int start, size_t len);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
 
 /**
  * @brief Allocates new String with s1 and s2.
@@ -234,7 +234,7 @@ char		*ft_substr(const char *s, unsigned int start, size_t len);
  * @param s2 String preffix.
  * @return Pointer to the new String, or NULL if the allocation fails.
 **/
-char		*ft_strjoin(const char *s1, const char *s2);
+char		*ft_strjoin(char const *s1, char const *s2);
 
 /**
  * @brief Allocates a copy of s1 with characters in set removed from both ends.
@@ -242,7 +242,7 @@ char		*ft_strjoin(const char *s1, const char *s2);
  * @param s2 String referenced to trim.
  * @return Pointer to the copied String, or NULL if the allocation fails.
 **/
-char		*ft_strtrim(const char *s1, const char *set);
+char		*ft_strtrim(char const *s1, char const *set);
 
 /**
  * @brief Allocates an array obtained by splitting s delimited by c.
@@ -250,7 +250,7 @@ char		*ft_strtrim(const char *s1, const char *set);
  * @param c String delimiter character.
  * @return Pointer to the splitted String.
 **/
-char		**ft_split(const char *s, char c);
+char		**ft_split(char const *s, char c);
 
 /**
  * @brief Allocates a String received by Integers.
@@ -265,7 +265,7 @@ char		*ft_itoa(int n);
  * @param f Function to apply to each character.
  * @return Index to the first position in the new array.
  **/
-char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
  * @brief Applies function 'f' to each character in the String 's'.
@@ -313,7 +313,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}					t_list;
 
 /**
  * @brief Allocates and returns a new node.
