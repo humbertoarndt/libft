@@ -4,10 +4,10 @@ Version: 2022 April - Created
 ## Score/Badge
 ![Libft score](https://github.com/humbertoarndt/libft/blob/main/s_libft.png?raw=true)
 ![Libft achiviment](https://github.com/humbertoarndt/libft/blob/main/libft.png?raw=true)  
-## Lessons Learned
-Besides the C functions that are the main objective, I struggled for not taking the Norme and the documentation seriously enough. So for now on I must respect and follow what the schools tell me to do.
 ## Overview
 C programming can be very tedious when one doesn't have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them. You will create your own library. It will be helpfull since you will use it in you next C school assignments.
+## Lessons Learned
+Besides the C functions that are the main objective, I struggled for not taking the Norme and the documentation seriously enough. So for now on I must respect and follow what the schools tell me to do.
 ## Table of Content
 * [Libc Functions](https://github.com/humbertoarndt/libft/blob/main/README.md#libc-functions)
 * [Additional Functions](https://github.com/humbertoarndt/libft/blob/main/README.md#additional-functions)
