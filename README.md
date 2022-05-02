@@ -1,5 +1,9 @@
 # 42 São Paulo - Libft
-Version: April 2022 - Created
+Version: April 2022 - Created  
+  
+![Libft score](https://github.com/humbertoarndt/libft/blob/main/s_libft.png?raw=true)
+![Libft achiviment](https://github.com/humbertoarndt/libft/blob/main/libft.png?raw=true)  
+  
 ## Overview
 C programming can be very tedious when one doesn't have access to the highly useful standard functions. This project is about understanding the way these functions work, implementing and learning to use them. You will create your own library. It will be helpfull since you will use it in you next C school assignments.
 ## Table of Content
