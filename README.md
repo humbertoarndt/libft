@@ -1,5 +1,6 @@
 # 42 São Paulo - Libft
-Version: April 2022 - Created  
+Update: 2022 May - Update functions
+Version: 2022 April - Created  
   
 ![Libft score](https://github.com/humbertoarndt/libft/blob/main/s_libft.png?raw=true)
 ![Libft achiviment](https://github.com/humbertoarndt/libft/blob/main/libft.png?raw=true)  
