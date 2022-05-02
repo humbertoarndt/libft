@@ -6,7 +6,7 @@
 /*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 14:04:33 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/29 20:14:20 by harndt           ###   ########.fr       */
+/*   Updated: 2022/05/02 17:18:10 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int	ft_atoi(const char *str)
 {
-	int	res;
-	int	sign;
+	long	res;
+	int		sign;
 
 	res = 0;
 	sign = 1;
 	while (*str == 32 || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-')
-		sign *= -1;
+		sign = -1;
 	if (*str == '-' || *str == '+')
 		str++;
 	while (ft_isdigit(*str))
@@ -30,5 +30,5 @@ int	ft_atoi(const char *str)
 		res = res * 10 + *str - '0';
 		str++;
 	}
-	return (res * sign);
+	return ((int)res * sign);
 }
