@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
+/*   By: harndt <harndt@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 21:42:28 by harndt            #+#    #+#             */
-/*   Updated: 2022/04/29 20:16:27 by harndt           ###   ########.fr       */
+/*   Updated: 2022/07/11 21:52:22 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 // Include external libraries
 # include <stdlib.h>
 # include <unistd.h>
+
+# define BUFFER_SIZE 42
 
 // Part 1 - Libc functions
 
@@ -384,4 +386,21 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
  * @return The new list, or NULL if the allocation fails.
 **/
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
+
+/**
+ * @brief Get the next line read from a file descriptor.
+ * @param fd The file desdriptor to read from.
+ * @return The read line, or NULL if there is nothing to read
+ * or an error occured.
+ */
+char	*ft_get_next_line(int fd);
+
+/**
+ * @brief Copies up to '\n' or the end of a string to dst.
+ * @param dst Pointer to dst where the cont is to be copied.
+ * @param src Pointer to the source of data to be coped.
+ * @param index Indicator of the starting position to be copied at dst.
+ * @return The new lengt of dst.
+ */
+size_t	ft_cpyline(char *dst, const char *src, size_t len);
 #endif
