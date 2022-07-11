@@ -6,7 +6,7 @@
 /*   By: harndt <harndt@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 21:42:28 by harndt            #+#    #+#             */
-/*   Updated: 2022/07/11 21:52:22 by harndt           ###   ########.fr       */
+/*   Updated: 2022/07/11 22:08:15 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,18 @@
 # define LIBFT_H
 
 // Include external libraries
+# include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
 
+// Defines
 # define BUFFER_SIZE 42
+# define DELIMITER '%'
+# define FORMATS "cspdiuxX%"
+# define BIN 2
+# define OCT 8
+# define DEC 10
+# define HEX 16
 
 // Part 1 - Libc functions
 
@@ -387,6 +395,8 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 **/
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
 
+
+// GNL Functions
 /**
  * @brief Get the next line read from a file descriptor.
  * @param fd The file desdriptor to read from.
@@ -403,4 +413,108 @@ char	*ft_get_next_line(int fd);
  * @return The new lengt of dst.
  */
 size_t	ft_cpyline(char *dst, const char *src, size_t len);
+
+// FT_PRINTF Function
+
+/**
+ * @brief A type that receives a va_list.
+ */
+typedef int	(*t_specifier)(va_list);
+
+/**
+ * @brief The functions sends formatted output to stdout.
+ * @param format the String that contains the text to be written to stdout.
+ * It can optionally contain embedded format tags that are replaced by
+ * values specified in subsequent additional arguments and formatted as
+ * requested.
+ * @return Upon success retuns the number of characters printed (excluding
+ * the null byte used to end output to strings).On failure, a negative number
+ * is returned.
+ **/
+int	ft_printf(const char *format, ...);
+
+//Specifiers functions
+/**
+ * @brief Prints the content as a character and find it's length.
+ * @param arg_ptr Va_list variables.
+ * @return 1.
+**/
+int	ft_specifier_c(va_list arg_ptr);
+
+/**
+ * @brief Prints the content as an int and find it's length.
+ * @param arg_ptr Va_list variables.
+ * @return The length from the arg_ptr received.
+**/
+int	ft_specifier_d(va_list arg_ptr);
+
+/**
+ * @brief Prints the content as a memory address and find it's length.
+ * @param arg_ptr Va_list variables.
+ * @return The length from the arg_ptr received + 2.
+**/
+int	ft_specifier_p(va_list arg_ptr);
+
+/**
+ * @brief Prints the content as a character '%' and find it's length.
+ * @param arg_ptr Va_list variables.
+ * @return 1.
+**/
+int	ft_specifier_percent(va_list arg_ptr);
+
+/**
+ * @brief Prints the content as a String and find it's length.
+ * @param arg_ptr Va_list variables.
+ * @return The length from the arg_ptr received.
+**/
+int	ft_specifier_s(va_list arg_ptr);
+
+/**
+ * @brief Prints the content as an unsigned int and find it's length.
+ * @param arg_ptr Va_list variables.
+ * @return The length from the arg_ptr received.
+**/
+int	ft_specifier_u(va_list arg_ptr);
+
+/**
+ * @brief Prints the content as a hexadecimal (lower) and find it's length.
+ * @param arg_ptr Va_list variables.
+ * @return The length from the arg_ptr received.
+**/
+int	ft_specifier_upperx(va_list arg_ptr);
+
+/**
+ * @brief Prints the content as a hexadecimal (upper) and find it's length.
+ * @param arg_ptr Va_list variables.
+ * @return The length from the arg_ptr received.
+**/
+int	ft_specifier_x(va_list arg_ptr);
+
+/**
+ * @brief Prints one char.
+ * @param c Char to be printed.
+**/
+void		ft_putchar(char c);
+
+/**
+ * @brief Finds a char in a String.
+ * @param str String to be searched.
+ * @param c Char to search for.
+ * @return The index position 'c' is found. -1 if there is no 'c'.
+ */
+int			ft_strnchr(const char *str, int c);
+
+/**
+ * @brief Converts the Unsigned integer n into a character String.
+ * @param n Unsigned int to be converted.
+ * @param base Base in which 'n' must be converted into.
+ * @return Pointer to a String contaning the unsigned int converted.
+ */
+char		*ft_utoa_base(unsigned long n, int base);
+
+/**
+ * @brief Prints a string.
+ * @param str String to be printed.
+**/
+void		ft_putstr(char *str);
 #endif

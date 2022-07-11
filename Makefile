@@ -16,7 +16,16 @@ SRCS += ft_substr.c		ft_strjoin.c	ft_strtrim.c	\
 		ft_striteri.c	ft_putchar_fd.c	ft_putstr_fd.c	\
 		ft_putendl_fd.c	ft_putnbr_fd.c
 
+# Add GNL
 SRCS += ft_get_next_line.c	ft_cpyline.c
+
+#Add FT_PRINTF
+SRCS += ft_printf.c	ft_strnchr.c	ft_utoa_base.c		\
+		ft_putstr.c	ft_putchar.c	ft_specifier_c.c	\
+		ft_specifier_d.c	ft_specifier_p.c			\
+		ft_specifier_percent.c	ft_specifier_s.c		\
+		ft_specifier_u.c	ft_specifier_upperx.c		\
+		ft_specifier_x.c
 
 OBJS := $(SRCS:.c=.o)
 
