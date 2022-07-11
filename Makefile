@@ -16,6 +16,8 @@ SRCS += ft_substr.c		ft_strjoin.c	ft_strtrim.c	\
 		ft_striteri.c	ft_putchar_fd.c	ft_putstr_fd.c	\
 		ft_putendl_fd.c	ft_putnbr_fd.c
 
+SRCS += ft_get_next_line.c	ft_cpyline.c
+
 OBJS := $(SRCS:.c=.o)
 
 BONUS_SRCS :=	ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	\
