@@ -35,30 +35,37 @@ BONUS_SRCS :=	ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	\
 
 BONUS_OBJS := $(BONUS_SRCS:.c=.o)
 
+GREEN		:= \033[1;32m
+RED			:= \033[1;31m
+WHT			:= \033[1;37m
+EOC			:= \033[1;0m
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
+	@echo "$(WHT)Compiling $(NAME)...$(EOC)"
 	@ar -rc $(NAME) $(OBJS)
-	@echo "Library $(NAME) created with success."
 	@ranlib $(NAME)
-	@echo "Library $(NAME) indexed with success."
+	@echo "$(GREEN)$(NAME) build completed.$(EOC)"
 
 bonus: $(OBJS) $(BONUS_OBJS)
+	@echo "$(WHT)Compiling LIBFT Bonus...$(EOC)"
 	@ar -rc $(NAME) $^
 	@ranlib $(NAME)
-	@echo "Bonus object created with success."
+	@echo "$(GREEN)LIBFT Bonus build completed.$(EOC)"
 
 %.o: %.c $(HEADER)
 	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "Object $< created with success."
 
 clean:
+	@echo "$(WHT)Removing .o files...$(EOC)"
 	@rm -f $(OBJS) $(BONUS_OBJS)
-	@echo "All objects removed with success."
+	@echo "$(GREEN)Clean done.$(EOC)"
 
 fclean: clean
+	@echo "$(WHT)Removing object- and binary -files...$(EOC)"
 	@rm -f $(NAME)
-	@echo "Library $(NAME) removed with success."
+	@echo "$(GREEN)Fclean done.$(EOC)"
 
 re: fclean all
 
