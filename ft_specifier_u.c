@@ -6,13 +6,13 @@
 /*   By: harndt <harndt@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 22:40:38 by harndt            #+#    #+#             */
-/*   Updated: 2022/07/11 22:04:51 by harndt           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:39:18 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	specifier_u(va_list arg_ptr)
+int	ft_specifier_u(va_list arg_ptr)
 {
 	char	*string;
 	int		length;
