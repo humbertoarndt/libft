@@ -6,7 +6,7 @@
 /*   By: harndt <harndt@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 21:42:28 by harndt            #+#    #+#             */
-/*   Updated: 2022/07/18 23:48:39 by harndt           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:36:32 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -395,7 +395,6 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 **/
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
 
-
 // GNL Functions
 /**
  * @brief Get the next line read from a file descriptor.
@@ -403,7 +402,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
  * @return The read line, or NULL if there is nothing to read
  * or an error occured.
  */
-char	*ft_get_next_line(int fd);
+char		*ft_get_next_line(int fd);
 
 /**
  * @brief Copies up to '\n' or the end of a string to dst.
@@ -412,7 +411,7 @@ char	*ft_get_next_line(int fd);
  * @param index Indicator of the starting position to be copied at dst.
  * @return The new lengt of dst.
  */
-size_t	ft_cpyline(char *dst, const char *src, size_t len);
+size_t		ft_cpyline(char *dst, const char *src, size_t len);
 
 // FT_PRINTF Function
 
@@ -431,7 +430,7 @@ typedef int	(*t_specifier)(va_list);
  * the null byte used to end output to strings).On failure, a negative number
  * is returned.
  **/
-int	ft_printf(const char *format, ...);
+int			ft_printf(const char *format, ...);
 
 //Specifiers functions
 /**
@@ -439,56 +438,56 @@ int	ft_printf(const char *format, ...);
  * @param arg_ptr Va_list variables.
  * @return 1.
 **/
-int	ft_specifier_c(va_list arg_ptr);
+int			ft_specifier_c(va_list arg_ptr);
 
 /**
  * @brief Prints the content as an int and find it's length.
  * @param arg_ptr Va_list variables.
  * @return The length from the arg_ptr received.
 **/
-int	ft_specifier_d(va_list arg_ptr);
+int			ft_specifier_d(va_list arg_ptr);
 
 /**
  * @brief Prints the content as a memory address and find it's length.
  * @param arg_ptr Va_list variables.
  * @return The length from the arg_ptr received + 2.
 **/
-int	ft_specifier_p(va_list arg_ptr);
+int			ft_specifier_p(va_list arg_ptr);
 
 /**
  * @brief Prints the content as a character '%' and find it's length.
  * @param arg_ptr Va_list variables.
  * @return 1.
 **/
-int	ft_specifier_percent(va_list arg_ptr);
+int			ft_specifier_percent(va_list arg_ptr);
 
 /**
  * @brief Prints the content as a String and find it's length.
  * @param arg_ptr Va_list variables.
  * @return The length from the arg_ptr received.
 **/
-int	ft_specifier_s(va_list arg_ptr);
+int			ft_specifier_s(va_list arg_ptr);
 
 /**
  * @brief Prints the content as an unsigned int and find it's length.
  * @param arg_ptr Va_list variables.
  * @return The length from the arg_ptr received.
 **/
-int	ft_specifier_u(va_list arg_ptr);
+int			ft_specifier_u(va_list arg_ptr);
 
 /**
  * @brief Prints the content as a hexadecimal (lower) and find it's length.
  * @param arg_ptr Va_list variables.
  * @return The length from the arg_ptr received.
 **/
-int	ft_specifier_upperx(va_list arg_ptr);
+int			ft_specifier_upperx(va_list arg_ptr);
 
 /**
  * @brief Prints the content as a hexadecimal (upper) and find it's length.
  * @param arg_ptr Va_list variables.
  * @return The length from the arg_ptr received.
 **/
-int	ft_specifier_x(va_list arg_ptr);
+int			ft_specifier_x(va_list arg_ptr);
 
 /**
  * @brief Prints one char.
