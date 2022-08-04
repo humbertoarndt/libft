@@ -28,7 +28,7 @@ SRCS += ft_printf.c	ft_strnchr.c	ft_utoa_base.c		\
 		ft_specifier_x.c
 
 # Add FDF
-SRCS += ft_atbs.c
+SRCS += ft_abs.c
 
 OBJS := $(SRCS:.c=.o)
 
