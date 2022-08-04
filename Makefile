@@ -27,6 +27,9 @@ SRCS += ft_printf.c	ft_strnchr.c	ft_utoa_base.c		\
 		ft_specifier_u.c	ft_specifier_upperx.c		\
 		ft_specifier_x.c
 
+# Add FDF
+SRCS += ft_atbs.c
+
 OBJS := $(SRCS:.c=.o)
 
 BONUS_SRCS :=	ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	\
