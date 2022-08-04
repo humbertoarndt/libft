@@ -6,7 +6,7 @@
 /*   By: harndt <harndt@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 21:42:28 by harndt            #+#    #+#             */
-/*   Updated: 2022/07/19 22:36:32 by harndt           ###   ########.fr       */
+/*   Updated: 2022/08/04 19:45:56 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -516,4 +516,13 @@ char		*ft_utoa_base(unsigned long n, int base);
  * @param str String to be printed.
 **/
 void		ft_putstr(char *str);
+
+/**
+ * @brief Comnputes the absolute calue of the integer argument 'x'.
+ * 
+ * @param x The value to compute.
+ * @return int The abosulute value of the integer argument.
+ */
+int	ft_abs(int x);
+
 #endif
