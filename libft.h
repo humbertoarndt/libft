@@ -6,7 +6,7 @@
 /*   By: harndt <harndt@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 21:42:28 by harndt            #+#    #+#             */
-/*   Updated: 2022/08/09 23:43:25 by harndt           ###   ########.fr       */
+/*   Updated: 2022/08/23 20:55:11 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@
 # define DEC 10
 # define HEX 16
 
-// Part 1 - Libc functions
+// =============================================================================
+// Part 1 - Libc Functions
+// =============================================================================
 
 // <ctype.h> functions:
 /**
@@ -228,7 +230,10 @@ void		*ft_calloc(size_t nitems, size_t size);
 **/
 void		ft_bzero(void *s, size_t n);
 
-// Part 2 - Additional functions
+// =============================================================================
+// Part 2 - Additional Functions
+// =============================================================================
+
 /**
  * @brief Allocates substring from the string.
  * @param s String from wich to create the substring.
@@ -312,7 +317,10 @@ void		ft_putendl_fd(char *s, int fd);
 **/
 void		ft_putnbr_fd(int n, int fd);
 
+// =============================================================================
 // Bonus Part
+// =============================================================================
+
 /**
  * @brief Basic structure of a linked list node.
  * @param content The data contained in the node.
@@ -395,7 +403,10 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 **/
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *));
 
+// =============================================================================
 // GNL Functions
+// =============================================================================
+
 /**
  * @brief Get the next line read from a file descriptor.
  * @param fd The file desdriptor to read from.
@@ -413,7 +424,9 @@ char		*ft_get_next_line(int fd);
  */
 size_t		ft_cpyline(char *dst, const char *src, size_t len);
 
+// =============================================================================
 // FT_PRINTF Function
+// =============================================================================
 
 /**
  * @brief A type that receives a va_list.
@@ -524,5 +537,22 @@ void		ft_putstr(char *str);
  * @return int The abosulute value of the integer argument.
  */
 int			ft_abs(int x);
+
+// =============================================================================
+// MINITALK
+// =============================================================================
+
+# define TRUE 1
+# define FALSE 0
+
+typedef int	t_bool;
+
+/**
+ * @brief Checks if the str is a number.
+ * 
+ * @param str The string to check.
+ * @return t_bool If the string only contains numbers TRUE, else FALSE.
+ */
+t_bool		ft_isnum(char *str);
 
 #endif
