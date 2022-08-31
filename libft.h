@@ -6,7 +6,7 @@
 /*   By: harndt <harndt@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 21:42:28 by harndt            #+#    #+#             */
-/*   Updated: 2022/08/23 20:55:11 by harndt           ###   ########.fr       */
+/*   Updated: 2022/09/01 00:03:50 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -554,5 +554,15 @@ typedef int	t_bool;
  * @return t_bool If the string only contains numbers TRUE, else FALSE.
  */
 t_bool		ft_isnum(char *str);
+
+/**
+ * @brief Checks a condition.
+ * 
+ * @param condition Tp be tested.
+ * @param a First parameter.
+ * @param b Second parameter.
+ * @return int The correct parameter.
+ */
+int			ft_ternary(int condition, int a, int b);
 
 #endif
