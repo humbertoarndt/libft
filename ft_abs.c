@@ -6,7 +6,7 @@
 /*   By: harndt <harndt@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 19:33:19 by harndt            #+#    #+#             */
-/*   Updated: 2022/08/04 19:42:42 by harndt           ###   ########.fr       */
+/*   Updated: 2022/09/01 00:05:07 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ int	ft_abs(int x)
 	if (x > 0)
 		return (x);
 	else
-		return(-x);
+		return (-x);
 }
