@@ -6,7 +6,7 @@
 /*   By: harndt <harndt@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 21:42:28 by harndt            #+#    #+#             */
-/*   Updated: 2022/09/01 00:03:50 by harndt           ###   ########.fr       */
+/*   Updated: 2022/09/09 18:52:48 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -565,4 +565,15 @@ t_bool		ft_isnum(char *str);
  */
 int			ft_ternary(int condition, int a, int b);
 
+// =============================================================================
+// PUSH_SWAP
+// =============================================================================
+
+/**
+ * @brief Converts the String to Long.
+ * @param str String representation of an Integer.
+ * @return If converted is done, return the Long number.
+ * @return If the converted is not done, return zero.
+**/
+long		ft_atol(const char *str);
 #endif
