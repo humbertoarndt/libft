@@ -6,21 +6,7 @@
 /*   By: harndt <harndt@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 18:47:47 by harndt            #+#    #+#             */
-/*   Updated: 2022/09/09 18:48:26 by harndt           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include "libft.h"
-
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: harndt <humberto.arndt@gmail.com>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 14:04:33 by harndt            #+#    #+#             */
-/*   Updated: 2022/05/02 17:18:10 by harndt           ###   ########.fr       */
+/*   Updated: 2022/09/09 20:14:26 by harndt           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +14,8 @@
 
 long	ft_atol(const char *str)
 {
-	long	res;
-	int		sign;
+	long long	res;
+	int			sign;
 
 	res = 0;
 	sign = 1;
@@ -44,5 +30,5 @@ long	ft_atol(const char *str)
 		res = res * 10 + *str - '0';
 		str++;
 	}
-	return (res * sign);
+	return ((long)res * sign);
 }
